@@ -1,0 +1,73 @@
+/* Estilos generales */
+.titulos{
+    grid-area: titulos;
+    text-align: center;
+}
+.bkg_transp{
+    background: map-get($colores, fondo_transp);
+}
+.section1{
+    padding: 7px 7px 0px 7px;
+    border-radius: $borde_redond;
+}
+.img_opac:hover {
+	opacity: .7;
+}
+.img_sombra{
+    box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px hsl(0deg, 0%, 0% / 30%), 0 -6px 16px -6px rgba(0, 0, 0, 0.03);
+}
+.ir-arriba {
+	display:none;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+h1,h2{
+    display: inline-block;
+}
+/* Grid beneficios y contacto */
+.gridBN {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%; 
+    grid-template-rows: repeat(4, auto);
+    grid-template-rows: 1fr 1fr 100fr 1fr;
+    grid-row-gap: 5px;
+    grid-template-areas:
+        "encabezado"
+        "titulos"
+        "contenido"
+        "pie";
+        .contenido{
+            grid-area: contenido;
+            @extend .animacion;
+                .fila{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start; 
+                    grid-column-gap: 1%;
+                    row-gap: 5px;
+                    flex-wrap: wrap;
+                    padding-bottom: 5px;
+                        .novs_iframe{
+                            float: right;
+                            margin-left: 5px;
+                            width: 769px;
+                            height: 432px;
+                        }
+                }
+                .img_club{
+                    float: right;
+                    margin-left: 5px;
+                }
+        }
+}
+/* Cambios bootstrap*/
+.card{
+    background-color: transparent !important;
+}
+a:hover{
+    color: map-get($colores, fuente_normal) !important;
+}
+/* Fin estilos generales */

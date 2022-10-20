@@ -1,0 +1,434 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+@import url("../css/animate.css");
+* {
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url("../images/backg1.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e1e1e1; }
+
+/* Estilos generales */
+.titulos {
+  grid-area: titulos;
+  text-align: center; }
+
+.bkg_transp {
+  background: rgba(0, 0, 0, 0.7); }
+
+.section1 {
+  padding: 7px 7px 0px 7px;
+  border-radius: 10px; }
+
+.img_opac:hover {
+  opacity: .7; }
+
+.img_sombra {
+  box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px black, 0 -6px 16px -6px rgba(0, 0, 0, 0.03); }
+
+.ir-arriba {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+
+h1, h2 {
+  display: inline-block; }
+
+/* Grid beneficios y contacto */
+.gridBN {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, auto);
+  grid-template-rows: 1fr 1fr 100fr 1fr;
+  grid-row-gap: 5px;
+  grid-template-areas: "encabezado" "titulos" "contenido" "pie"; }
+  .gridBN .contenido {
+    grid-area: contenido; }
+    .gridBN .contenido .fila {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      grid-column-gap: 1%;
+      row-gap: 5px;
+      flex-wrap: wrap;
+      padding-bottom: 5px; }
+      .gridBN .contenido .fila .novs_iframe {
+        float: right;
+        margin-left: 5px;
+        width: 769px;
+        height: 432px; }
+    .gridBN .contenido .img_club {
+      float: right;
+      margin-left: 5px; }
+
+/* Cambios bootstrap*/
+.card {
+  background-color: transparent !important; }
+
+a:hover {
+  color: #e1e1e1 !important; }
+
+/* Fin estilos generales */
+header {
+  grid-area: encabezado; }
+  header .header_img {
+    width: 300px;
+    margin-left: 10px; }
+  header .header_img:hover {
+    animation: pulse;
+    animation-duration: 1s; }
+  header .nav-item:hover {
+    background-color: rgba(88, 88, 88, 0.3); }
+
+footer {
+  grid-area: pie;
+  text-align: center;
+  color: #e1e1e1;
+  position: relative;
+  bottom: 0;
+  padding-top: 0.5%; }
+  footer .footer_img:hover {
+    animation: heartBeat;
+    animation-duration: 2s; }
+
+.popp_xl {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #e1e1e1; }
+
+.popp_l {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  color: #e1e1e1; }
+
+.popp_m {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #e1e1e1; }
+
+.popp_s {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #e1e1e1;
+  font-weight: 500; }
+
+.font_formu {
+  font-style: italic;
+  color: #212529; }
+
+.font_autor {
+  font-style: italic;
+  color: #bebebe; }
+
+.font_precio {
+  color: #f97979;
+  font-weight: 600; }
+
+.font_pub {
+  color: white;
+  text-shadow: 0 0 4px black;
+  font-weight: 700; }
+
+.font_espac1 {
+  line-height: 120%;
+  margin-bottom: 0; }
+
+.font_espac2 {
+  line-height: 150%; }
+
+.animacion, .gridBN .contenido, .gridIndex .mainLatI_Index, .gridIndex .asideLatD_Index, .gridCont .formu .formulario, .gridCont .mapa {
+  animation: fadeInLeft;
+  animation-duration: 1s !important; }
+
+#MultiC .carousel-inner .carousel-item.active,
+#MultiC .carousel-inner .carousel-item-next,
+#MultiC .carousel-inner .carousel-item-prev,
+#MultiCb .carousel-inner .carousel-item.active,
+#MultiCb .carousel-inner .carousel-item-next,
+#MultiCb .carousel-inner .carousel-item-prev {
+  display: flex; }
+
+#MultiC .carousel-inner .carousel-item-end.active,
+#MultiCb .carousel-inner .carousel-item-end.active {
+  transform: unset; }
+
+#MultiC .carousel-inner .carousel-item-next,
+#MultiCb .carousel-inner .carousel-item-next {
+  transform: unset; }
+
+#MultiC .carousel-inner .carousel-item-start.active,
+#MultiCb .carousel-inner .carousel-item-start.active {
+  opacity: 0; }
+
+#MultiC .carousel-inner .carousel-item-prev,
+#MultiCb .carousel-inner .carousel-item-prev {
+  transform: unset; }
+
+#MultiC .carousel-inner .carousel-item-end,
+#MultiCb .carousel-inner .carousel-item-end {
+  transform: unset; }
+
+#MultiC .carousel-inner .carousel-item-start,
+#MultiCb .carousel-inner .carousel-item-start {
+  transform: unset; }
+
+#MultiC .carousel-item,
+#MultiCb .carousel-item {
+  justify-content: space-between; }
+
+/* Inicio Header */
+.gridIndex {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: repeat(5, auto);
+  grid-row-gap: 5px;
+  grid-template-areas: "encabezado encabezado" "titulos titulos" "mainLatI_Index asideLatD_Index" "mainLatI_Index ." "pie pie"; }
+  .gridIndex .mainLatI_Index {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-area: mainLatI_Index; }
+    .gridIndex .mainLatI_Index .index_prods {
+      width: 130px; }
+    .gridIndex .mainLatI_Index .img-lanz-end {
+      float: right; }
+    .gridIndex .mainLatI_Index .img-lanz-st {
+      float: left; }
+  .gridIndex .asideLatD_Index {
+    display: inline-block;
+    padding: 5px 0 5px 0;
+    margin-right: 1%;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeInRight;
+    grid-area: asideLatD_Index; }
+    .gridIndex .asideLatD_Index #Carous_promo {
+      width: 230px !important;
+      margin: auto; }
+      .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
+        content: url("../images/pub_envios.jpg");
+        border-radius: 10px; }
+      .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
+        content: url("../images/pub_pagos.jpg");
+        border-radius: 10px; }
+
+/* Fin header */
+/* Productos */
+.gridProds {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: repeat(5, auto);
+  grid-row-gap: 5px;
+  grid-template-areas: "encabezado encabezado" "titulos titulos" "mainLatI_Prod asideLatD_Prod" "mainLatI_Prod ." "pie pie"; }
+  .gridProds .mainLatI_Prod {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-area: mainLatI_Prod; }
+    .gridProds .mainLatI_Prod .prod_card, .gridProds .mainLatI_Prod .prod_card_jdm {
+      width: 130px;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 2px; }
+    .gridProds .mainLatI_Prod .prod_card_jdm {
+      width: 150px; }
+  .gridProds .asideLatD_Prod {
+    display: inline-block;
+    padding: 5px 0 5px 0;
+    margin-right: 1%;
+    border-radius: 10px;
+    text-align: center;
+    grid-area: asideLatD_Prod; }
+    .gridProds .asideLatD_Prod .categorias {
+      display: grid;
+      grid-template-columns: 35px auto;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "cat_titulo cat_titulo" "masVIco masV" "libIco libros" "jueIco juegos";
+      align-items: center; }
+      .gridProds .asideLatD_Prod .categorias .cat_titulo {
+        grid-area: cat_titulo;
+        justify-content: center; }
+      .gridProds .asideLatD_Prod .categorias .masVIco {
+        grid-area: masVIco; }
+      .gridProds .asideLatD_Prod .categorias .masV {
+        grid-area: masV;
+        text-align: start;
+        justify-items: center; }
+      .gridProds .asideLatD_Prod .categorias .libIco {
+        grid-area: libIco;
+        align-self: start; }
+      .gridProds .asideLatD_Prod .categorias .libros {
+        grid-area: libros;
+        display: inline;
+        text-align: left;
+        padding-top: 8px; }
+      .gridProds .asideLatD_Prod .categorias .jueIco {
+        grid-area: jueIco; }
+      .gridProds .asideLatD_Prod .categorias .juegos {
+        grid-area: juegos;
+        text-align: start;
+        justify-items: center; }
+      .gridProds .asideLatD_Prod .categorias .aside_subli {
+        list-style: none;
+        text-align: left; }
+    .gridProds .asideLatD_Prod .cat_resto {
+      display: none; }
+
+/* Fin productos */
+/* Grid contacto principal */
+.gridCont {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr 100fr 1fr;
+  grid-template-areas: "encabezado encabezado" "titulos titulos" "formu mapa" "pie pie";
+  grid-column-gap: 3%;
+  grid-row-gap: 5px; }
+  .gridCont .formu {
+    grid-area: formu;
+    margin-left: 6%; }
+    .gridCont .formu .formulario {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .gridCont .formu .formulario .cont_p {
+        padding: 0.1rem 0.3rem; }
+      .gridCont .formu .formulario .cont_input {
+        width: 100%;
+        max-width: 400px; }
+      .gridCont .formu .formulario .p_check {
+        display: inline-block; }
+  .gridCont .mapa {
+    grid-area: mapa;
+    margin-right: 6%;
+    animation: fadeInRight; }
+    .gridCont .mapa .cont_iframe {
+      width: 98%;
+      height: 475px;
+      border: 0;
+      margin: 1% 1% 1% 1%; }
+
+/* Fin Grid contacto principal */
+/* Redimension publicidad Index */
+@media (min-width: 1440px) {
+  .gridIndex .asideLatD_Index #Carous_promo {
+    width: 300px !important; }
+    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
+      content: url("../images/pub_envios_1440.jpg"); }
+    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
+      content: url("../images/pub_pagos_1440.jpg"); } }
+
+/* Tamaño tablet */
+@media (max-width: 1024px) {
+  body {
+    background-image: url("../images/backg1_1024.jpg"); }
+  /* Inicio Index */
+  .gridIndex {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "encabezado" "titulos" "mainLatI_Index" "asideLatD_Index" "pie"; }
+    .gridIndex .asideLatD_Index {
+      animation: fadeInLeft;
+      margin-left: 1%; }
+      .gridIndex .asideLatD_Index #Carous_promo {
+        width: 430px !important; }
+        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
+          content: url("../images/pub_envios_1024.jpg"); }
+        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
+          content: url("../images/pub_pagos_1024.jpg"); }
+  /* Fin Index */
+  /* Inicio contacto*/
+  .gridCont {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "encabezado" "titulos" "formu" "mapa" "pie"; }
+    .gridCont .formu {
+      margin-left: 5%;
+      margin-right: 5%; }
+      .gridCont .formu .formulario .img_formu {
+        display: none; }
+    .gridCont .mapa {
+      margin-left: 5%;
+      margin-right: 5%;
+      animation: fadeInRight; }
+  /* Fin contacto*/
+  /* Inicio Productos */
+  .gridProds {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "encabezado" "titulos" "asideLatD_Prod" "mainLatI_Prod" "pie"; }
+    .gridProds .mainLatI_Prod {
+      animation: fadeInRight; }
+    .gridProds .asideLatD_Prod {
+      margin-left: 1%; }
+      .gridProds .asideLatD_Prod .categorias .cat_titulo {
+        display: none; }
+      .gridProds .asideLatD_Prod .cat_desk {
+        display: none; }
+      .gridProds .asideLatD_Prod .cat_resto {
+        display: inline-block; }
+  /* Fin Productos */
+  /* Inicio Generales */
+  .gridBN .contenido .fila .novs_iframe {
+    width: 461px;
+    height: 259px; }
+  /* Boostrap */
+  header .navbar-collapse .navbar-nav .nav-item {
+    padding-left: 1rem !important; } }
+
+/* Tamaño celular */
+@media (max-width: 768px) {
+  body {
+    background-image: url("../images/backg1_768.jpg"); }
+  /* Inicio Generales */
+  .gridBN .contenido .fila .novs_iframe {
+    width: 370px;
+    height: 208px; }
+  .gridBN .contenido .img_club {
+    float: unset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  /* Fin Generales */ }
+
+/* Tamaño XS */
+@media (max-width: 576px) {
+  /* Inicio Index */
+  .gridIndex .mainLatI_Index .text_al {
+    text-align: center; }
+  .gridIndex .mainLatI_Index .img-lanz-end {
+    float: unset;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  .gridIndex .mainLatI_Index .img-lanz-st {
+    float: unset;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  .gridIndex .asideLatD_Index #Carous_promo {
+    width: 330px !important; }
+  /* Fin Index */
+  /* Inicio Productos */
+  .gridProds .mainLatI_Prod .card-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  /* Fin Productos */
+  /* Inicio Generales */
+  .gridBN .contenido .fila .novs_iframe {
+    float: unset;
+    width: 333px;
+    height: 187px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  /* Fin Generales */ }

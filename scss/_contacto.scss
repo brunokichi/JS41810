@@ -1,0 +1,47 @@
+/* Grid contacto principal */
+.gridCont {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto auto; 
+    grid-template-rows: 1fr 1fr 100fr 1fr;
+    grid-template-areas:
+        "encabezado encabezado"
+        "titulos titulos"
+        "formu mapa"
+        "pie pie";
+    grid-column-gap: 3%;
+    grid-row-gap: 5px;
+        .formu{
+            grid-area: formu;
+            margin-left: 6%;
+                .formulario{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center; 
+                    @extend .animacion;
+                        .cont_p{
+                            padding: 0.1rem 0.3rem;
+                        }
+                        .cont_input{
+                            width: 100%;
+                            max-width: 400px;
+                        }
+                        .p_check{
+                            display: inline-block;
+                        }
+                }
+        }
+        .mapa{
+            grid-area: mapa;
+            margin-right: 6%;
+            @extend .animacion;
+            animation: fadeInRight;
+                .cont_iframe{
+                    width: 98%;
+                    height: 475px;
+                    border: 0;
+                    margin: 1% 1% 1% 1%;
+                }
+        }
+}
+/* Fin Grid contacto principal */

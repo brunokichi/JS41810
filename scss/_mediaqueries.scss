@@ -1,0 +1,203 @@
+/* Redimension publicidad Index */
+@media (min-width:1440px){
+    .gridIndex {
+        .asideLatD_Index{
+            #Carous_promo{
+                width: 300px !important;
+                    .img_car_promo1{
+                        content: url("../images/pub_envios_1440.jpg");
+                    }
+                    .img_car_promo2{
+                        content: url("../images/pub_pagos_1440.jpg");
+                    }
+            }
+        }
+    }
+}
+/* Tamaño tablet */
+@media (max-width:1024px){
+    body{
+        background-image: url("../images/backg1_1024.jpg");
+    }
+    /* Inicio Index */
+    .gridIndex {
+        grid-template-columns: 100%; 
+        grid-template-rows: repeat(5, auto); 
+        grid-template-areas:
+            "encabezado"
+            "titulos"
+            "mainLatI_Index"
+            "asideLatD_Index"
+            "pie";
+            .asideLatD_Index{
+                animation: fadeInLeft;
+                margin-left: 1%;
+                    #Carous_promo{
+                        width: 430px !important;
+                        .img_car_promo1{
+                            content: url("../images/pub_envios_1024.jpg");
+                        }
+                        .img_car_promo2{
+                            content: url("../images/pub_pagos_1024.jpg");
+                        }
+                    }
+            }
+    }
+    /* Fin Index */
+    /* Inicio contacto*/
+    .gridCont {
+        grid-template-columns: auto; 
+        grid-template-rows: repeat(5, auto); 
+        grid-template-areas:
+            "encabezado"
+            "titulos"
+            "formu"
+            "mapa"
+            "pie";
+            .formu{
+                margin-left: 5%;
+                margin-right: 5%;
+                    .formulario{
+                        .img_formu{
+                            display: none;
+                        }
+                    }
+            }
+            .mapa{
+                margin-left: 5%;
+                margin-right: 5%;
+                animation: fadeInRight;
+            }
+    }
+    /* Fin contacto*/
+    /* Inicio Productos */
+    .gridProds {
+        grid-template-columns: 100%; 
+        grid-template-rows: repeat(5, auto); 
+        grid-template-areas:
+            "encabezado"
+            "titulos"
+            "asideLatD_Prod"
+            "mainLatI_Prod"
+            "pie";
+            .mainLatI_Prod{
+                animation: fadeInRight;
+            }
+            .asideLatD_Prod{
+                margin-left: 1%;
+                .categorias{
+                    .cat_titulo{
+                        display: none;
+                    }
+                }
+                .cat_desk{
+                    display: none;
+                }
+                .cat_resto{
+                    display: inline-block;
+                }
+            }
+    }
+    /* Fin Productos */
+    /* Inicio Generales */
+    .gridBN {
+        .contenido{
+            .fila{
+                .novs_iframe{
+                    width: 461px;
+                    height: 259px;
+                }
+            }
+        }
+    }
+    /* Boostrap */
+    header{
+        .navbar-collapse{
+            .navbar-nav{
+                .nav-item{
+                    padding-left: 1rem !important;
+                }
+            }
+        }
+    }
+}
+/* Tamaño celular */
+@media (max-width:768px){
+    body{
+        background-image: url("../images/backg1_768.jpg");
+    }
+    /* Inicio Generales */
+    .gridBN {
+        .contenido{
+            .fila{
+                .novs_iframe{
+                    width: 370px;
+                    height: 208px;
+                }
+            }
+            .img_club{
+                float: unset;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    /* Fin Generales */
+}
+/* Tamaño XS */
+@media (max-width:576px){
+    /* Inicio Index */
+    .gridIndex {
+        .mainLatI_Index{
+            .text_al{
+                text-align: center;
+            }
+            .img-lanz-end{
+                float:unset;
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .img-lanz-st{
+                float:unset;
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+        .asideLatD_Index{
+            #Carous_promo{
+                width: 330px !important;
+            }
+        }
+    }
+    /* Fin Index */
+    /* Inicio Productos */
+    .gridProds {
+        .mainLatI_Prod{
+            .card-group {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+            }
+        }
+    }
+    /* Fin Productos */
+    /* Inicio Generales */
+    .gridBN {
+        .contenido{
+            .fila{
+                .novs_iframe{
+                    float:unset;
+                    width: 333px;
+                    height: 187px;
+                    display: block;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    /* Fin Generales */
+}

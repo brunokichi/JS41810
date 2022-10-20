@@ -1,0 +1,25 @@
+{
+  "name": "libreriakichinovsky",
+  "version": "1.0.0",
+  "description": "The Online Book Store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunokichi/JS41810.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunokichi/JS41810/issues"
+  },
+  "homepage": "https://github.com/brunokichi/JS41810#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

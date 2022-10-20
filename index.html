@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Online Bookstore, no somos una simple libreria. Venta de libros, juegos de mesa, club de beneficios y mas...">
+        <meta name="keywords" content="libreria, libros, comics, juegos, juegos de mesa, manga, congresos de lectura, club de beneficios">
+        <link rel="shortcut icon" href="./images/icono.png">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>The Online Bookstore</title>
+    </head>
+<body>
+    <div class="gridIndex">
+        <!-- Inicio Header -->
+        <header>
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg bkg_transp navbar-dark align-items-end p-0">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#"><img loading="lazy" src="./images/logo.png" alt="Imagen Logo" class="header_img"></a>
+                    <!-- Menú de navegación -->
+                    <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+                        <ul class="navbar-nav popp_m">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/prods.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/novedades.html">Novedades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/beneficios.html">Beneficios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Fin Header -->
+        <div class="titulos">
+            <h1 class="popp_xl mb-1 lh-1">The Online Bookstore</h1>
+        </div>
+        <main class="mainLatI_Index ps-1 pe-1">
+            <!-- Secciónes para destacar productos -->
+            <section class="section1 bkg_transp">
+                <h3 class="popp_m mb-1">Recomendados</h3>
+                <div id="MultiC">
+                    <div class="row mx-auto my-auto justify-content-center">
+                        <div id="multicarous" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#multicarous" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#multicarous" data-bs-slide="next">
+                                <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-inner" role="listbox" aria-label="Lista de productos recomendados">
+                                <div class="carousel-item active" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_cm_kenobi.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Star Wars - Los diarios de Wan-Kenobi">
+                                        <figcaption class="popp_s text-center">Star Wars - Los diarios de Wan-Kenobi</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_inf_madrigal.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada La casa de los madrigal">
+                                        <figcaption class="popp_s text-center">La casa de los madrigal</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_hist_argentina.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Breve historia contemporánea de la Argentina">
+                                        <figcaption class="popp_s text-center">Breve historia contemporánea de la Argentina</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_hist_revolucion.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Los dias de la revolución">
+                                        <figcaption class="popp_s text-center">Los dias de la revolución</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_hist_roma.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Roma Victoriosa">
+                                        <figcaption class="popp_s text-center">Roma Victoriosa</figcaption>
+                                     </figure>
+                                </div>
+                                <div class="carousel-item" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_cm_transf_cybertron.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Transformers: Cybertron Oscuro">
+                                        <figcaption class="popp_s text-center">Transformers: Cybertron Oscuro</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_cm_love.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Love Wars">
+                                        <figcaption class="popp_s text-center">Love Wars</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_cf_starw_mandalorian.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Star Wars - The Mandalorian">
+                                        <figcaption class="popp_s text-center">Star Wars - The Mandalorian</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section1 bkg_transp">
+                <h3 class="mb-1 popp_m"><a href="pages/prods.html#mas_vend" class="text-decoration-none popp_m">Más vendidos</a></h3>
+                <div id="MultiCb">
+                    <div class="row mx-auto my-auto justify-content-center">
+                        <div id="multicarous2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#multicarous2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#multicarous2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-inner" role="listbox" aria-label="Lista de productos mas vendidos">
+                                <div class="carousel-item active" role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_el_italiano.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada El Italiano">
+                                        <figcaption class="popp_s text-center">El Italiano</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item"  role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_notas.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Notas al pie">
+                                        <figcaption class="popp_s text-center">Notas al pie</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item"  role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_roma.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Roma soy yo">
+                                        <figcaption class="popp_s text-center">Roma soy yo</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item"  role="listitem ">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_corona.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Una corona de huesos dorados">
+                                        <figcaption class="popp_s text-center">Una corona de huesos dorados</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item"  role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_estrellas.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Estrellas y Galaxias">
+                                        <figcaption class="popp_s text-center">Estrellas y Galaxias</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item"  role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_hist_griegos.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada La gran aventura de los griegos">
+                                        <figcaption class="popp_s text-center">La gran aventura de los griegos</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item"  role="listitem">
+                                    <figure class="figure me-3 index_prods">
+                                        <img loading="lazy" src="./images/prod_inf_vicnix.jpg" class="figure-img rounded img_opac mb-1 img_sombra" alt="Portada Vicnix">
+                                        <figcaption class="popp_s text-center">Vicnix En la ciudad secreta</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Sección para mostrar lanzamientos u otras cosas -->
+            <section class="section1 container-xxl mx-auto bkg_transp">
+                <h3 class="popp_m mb-1">Se viene el mundial Qatar 2022</h3>
+                <div class="popp_s mb-2">
+                    <img loading="lazy" class="img-lanz-end rounded img_sombra img-fluid mx-auto mb-2" src="./images/mundial.jpg" alt="Imagen del mundial Qatar 2022">
+                    <p>Cada vez falta menos para el comienzo del Mundial de Qatar 2022 que se 
+                    desarrollará entre el 20 de noviembre y el 18 de diciembre. Mientras los 
+                    fanáticos del fútbol continúan expectantes por el inicio de la Copa del Mundo 
+                    ya se puede conseguir el álbum de figuritas.</p>
+                    <p>En cada edición del Mundial es un ritual muy popular coleccionar figuritas 
+                    tanto para los más chicos como también para los grandes, que históricamente han estado 
+                    presentes en otras competiciones, pero ninguno logró tanta popularidad ya que la Copa 
+                    del Mundo causa una atracción especial.</p>
+                    <p>Panini, la única empresa autorizada por parte de la Federación Internacional de Fútbol 
+                    Asociación (FIFA) para comercializar el producto, ya realizó el lanzamiento oficial del 
+                    álbum de figuritas de Qatar 2022.</p>
+                    <p>Acercate a nuestro local a adquirir tanto el album como los paquetes de figuritas. 
+                    Proximamente tambien estaremos organizando encuentros donde habra sorteos, canjes y más...</p>
+                </div>
+            </section>
+            <section class="section1 container-xxl mx-auto bkg_transp">
+                <h3 class="popp_m mb-1">Saga Game of Thrones</h3>
+                <div class="popp_s mb-2">
+                    <img loading="lazy" class="img-lanz-st rounded img-fluid mx-auto mb-2" src="./images/gameofthrones.png" alt="Imagen del mundial Qatar 2022">
+                    <p>Con la llegada de la precuela "La casa del dragon", ¿a quien no le dieron ganas de 
+                    volver a ver la saga desde el inicio? En The Online Book Store te acercamos la saga
+                    completa para que puedas lograrlo</p>
+                    <p>El regalo perfecto para los fans de Game of Thrones ¡un set en caja con las primeras cinco novelas!
+                    Una experiencia de entretenimiento inmersiva como ninguna otra, "Canción de Hielo y Fuego" (como en realidad 
+                    se llama la saga "Juego de Tronos") le ha ganado a George R. R. Martin aclamación internacional y millones 
+                    de lectores leales.</p>
+                    <p>La saga está compuesta en realidad por un total de 7 libros, aunque los dos últimos libros aún no han sido publicados<br>
+                    - Juego de Tronos (1996)<br>
+                    - Choque de reyes (1998)<br>
+                    - Tormenta de espadas (2000)<br>
+                    - Festín de cuervos (2005)<br>
+                    - Danza de dragones (2011)<br>
+                    - Vientos de invierno (sin publicar)<br>
+                    - Sueño de primavera (sin publicar)
+                    </p>
+                    <p>La historia se desarrolla en un mundo ficticio de carácter medieval donde hay Siete Reinos. Hay tres 
+                    líneas argumentales principales:<br>
+                    - La crónica de la guerra civil dinástica por el control de Poniente 
+                    entre varias familias nobles que aspiran al Trono de Hierro;<br>
+                    - La creciente amenaza de "los otros", seres desconocidos que viven al otro lado de un inmenso muro de hielo 
+                    que protege el Norte de Poniente;<br>
+                    - Y el viaje de Daenerys Targaryen, la hija exiliada del rey que fue asesinado en una guerra civil anterior,
+                     y que pretende regresar a Poniente para reclamar sus derechos dinásticos.</p>
+                    <p>Tras un largo verano de varios años, el temible invierno se acerca a los Siete Reinos. 
+                    Lord Eddard 'Ned' Stark, señor de Invernalia, deja sus dominios para ir a la corte de su amigo, 
+                    el rey Robert Baratheon, en Desembarco del Rey, la capital de los Siete Reinos. 
+                    Stark se convierte en la Mano del Rey e intenta desentrañar una maraña de intrigas que pondrá en peligro 
+                    su vida y la de todos los suyos. Mientras tanto, diversas facciones conspiran con un solo objetivo: apoderarse del trono.</p>
+                </div>
+            </section>
+        </main>
+        <!-- Sector lateral con publicidades -->
+        <aside class="asideLatD_Index bkg_transp">
+            <h3 class="popp_m">Promociones</h3>
+            <div class="carousel slide carousel-fade justify-content-center mb-2" id="Carous_promo" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img loading="lazy" class="d-block w-100 img_car_promo1" alt="Imagen envio a domicilio">
+                        <div class="carousel-caption pt-0 pb-0 d-md-block font_pub">
+                            <h5 class="rounded-pill p-2 d-inline">Bonificá el envio</h5>
+                            <p class="rounded-pill p-2">Si tu compra supera los $6000 podes tener el envio a domicilio bonificado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img loading="lazy" class="d-block w-100 img_car_promo2" alt="Imagen formas de pago">
+                        <div class="carousel-caption pt-0 pb-0 d-md-block font_pub">
+                            <h5 class="rounded-pill p-2 d-inline">Formas de pago</h5>
+                            <p class="rounded-pill p-2">Ofrecemos muchas formas de pago, con descuentos y cuotas sin interés</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#Carous_promo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#Carous_promo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </aside>
+        <!-- Pie de pagina con acceso a distintas redes -->
+        <footer class="bkg_transp">
+            <div>
+                <a target="_blank" href="https://www.whatsapp.com/?lang=es"><img loading="lazy" src="./images/whts.png" alt="Escribinos por Whatsapp" class="footer_img mt-1 me-2"></a>
+                <a target="_blank" href="https://www.instagram.com/"><img loading="lazy" src="./images/instag.png" alt="Seguinos en Instagram" class="footer_img mt-1 me-2"></a>
+                <a target="_blank" href="https://es-la.facebook.com/"><img loading="lazy" src="./images/faceb.png" alt="Seguinos en Facebook" class="footer_img"></a>
+            </div>
+            <p class="popp_s mb-1 mt-1">®2022 - Todos los derechos reservados</p>
+        </footer>
+        <img loading="lazy" src="./images/top.png" alt="Ir al top" class="footer_img ir-arriba">
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.6.1.js"></script>
+    <script src="./js/top.js"></script>
+	<script src="./js/multicarousel.js"></script>
+</body>
+</html>

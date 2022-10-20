@@ -1,0 +1,43 @@
+/* Inicio Header */
+.gridIndex {
+    @include grid_2x5;
+    grid-template-areas:
+        "encabezado encabezado"
+        "titulos titulos"
+        "mainLatI_Index asideLatD_Index"
+        "mainLatI_Index ."
+        "pie pie";
+        .mainLatI_Index {
+            @include mainLatI(column);
+            @extend .animacion;
+            grid-area: mainLatI_Index;
+                .index_prods{
+                    width: 130px;
+                }
+                .img-lanz-end{
+                    float: right;
+                }
+                .img-lanz-st{
+                    float: left;
+                }
+        }
+        .asideLatD_Index{
+            @include asideLatD;
+            @extend .animacion;
+            animation: fadeInRight;
+            grid-area: asideLatD_Index;
+                #Carous_promo{
+                    width: 230px !important;
+                    margin: auto;
+                        .img_car_promo1{
+                            content: url("../images/pub_envios.jpg");
+                            border-radius: $borde_redond;
+                        }
+                        .img_car_promo2{
+                            content: url("../images/pub_pagos.jpg");
+                            border-radius: $borde_redond;
+                        }
+                }
+        }
+}
+/* Fin header */

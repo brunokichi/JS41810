@@ -1,0 +1,45 @@
+.popp_xl{
+    font-family: $fuente_familia;
+    font-size: 20px;
+    color: map-get($colores, fuente_normal);
+}
+.popp_l{
+    font-family: $fuente_familia;
+    font-size: 17px;
+    color: map-get($colores, fuente_normal);
+}
+.popp_m{
+    font-family: $fuente_familia;
+    font-size: 15px;
+    color: map-get($colores, fuente_normal);
+}
+.popp_s{
+    font-family: $fuente_familia;
+    font-size: 13px;
+    color: map-get($colores, fuente_normal);
+    font-weight: 500;
+}
+.font_formu{
+    font-style:italic;
+    color: map-get($colores, fuente_formu);
+}
+.font_autor{
+    font-style:italic;
+    color: map-get($colores, fuente_autor);
+}
+.font_precio{
+    color: map-get($colores, fuente_precio);
+    font-weight: 600;
+}
+.font_pub{
+    color: map-get($colores, fuente_pub);
+    text-shadow: 0 0 4px black;
+    font-weight: 700;
+}
+.font_espac1{
+    line-height: 120%;
+    margin-bottom: 0;
+}
+.font_espac2{
+    line-height: 150%;
+}

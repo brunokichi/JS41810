@@ -1,0 +1,12 @@
+footer{
+    grid-area: pie;
+    text-align: center;
+    color: map-get($colores, fuente_normal);
+    position: relative;
+    bottom: 0;
+    padding-top: 0.5%;
+        .footer_img:hover{
+            animation: heartBeat;
+            animation-duration: 2s;
+        }
+}

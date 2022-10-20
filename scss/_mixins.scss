@@ -1,0 +1,18 @@
+@mixin grid_2x5{
+    display: grid;
+    grid-template-columns: 75% 25%; 
+    grid-template-rows: repeat(5, auto); 
+    grid-row-gap: 5px;
+}
+@mixin mainLatI($direction){
+    display: flex;     
+    flex-direction: $direction;
+    gap: 10px;
+}
+@mixin asideLatD{
+    display: inline-block; 
+    padding: 5px 0 5px 0;
+    margin-right: 1%;
+    border-radius: $borde_redond;
+    text-align: center;
+}

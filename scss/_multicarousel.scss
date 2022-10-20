@@ -1,0 +1,36 @@
+#MultiC .carousel-inner .carousel-item.active,
+#MultiC .carousel-inner .carousel-item-next,
+#MultiC .carousel-inner .carousel-item-prev,
+#MultiCb .carousel-inner .carousel-item.active,
+#MultiCb .carousel-inner .carousel-item-next,
+#MultiCb .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+#MultiC .carousel-inner .carousel-item-end.active,
+#MultiCb .carousel-inner .carousel-item-end.active{
+    transform: unset;
+}
+#MultiC .carousel-inner .carousel-item-next,
+#MultiCb .carousel-inner .carousel-item-next {
+    transform: unset;
+}
+#MultiC .carousel-inner .carousel-item-start.active,
+#MultiCb .carousel-inner .carousel-item-start.active{
+    opacity: 0;
+} 
+#MultiC .carousel-inner .carousel-item-prev,
+#MultiCb .carousel-inner .carousel-item-prev {
+    transform: unset;
+}
+#MultiC .carousel-inner .carousel-item-end,
+#MultiCb .carousel-inner .carousel-item-end{
+    transform: unset;
+}
+#MultiC .carousel-inner .carousel-item-start,
+#MultiCb .carousel-inner .carousel-item-start { 
+    transform: unset;
+}
+#MultiC .carousel-item,
+#MultiCb .carousel-item{
+    justify-content: space-between;
+}

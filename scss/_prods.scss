@@ -1,0 +1,76 @@
+/* Productos */
+.gridProds {
+    @include grid_2x5;
+    grid-template-areas:
+        "encabezado encabezado"
+        "titulos titulos"
+        "mainLatI_Prod asideLatD_Prod"
+        "mainLatI_Prod ."
+        "pie pie";
+        .mainLatI_Prod{
+            @include mainLatI(column); 
+            grid-area: mainLatI_Prod;
+                .prod_card {
+                    width: 130px;
+                    border: 1px solid map-get($colores, borde_card);
+                    border-radius: 2px;
+                }
+                .prod_card_jdm {
+                    @extend .prod_card;
+                    width: 150px;
+                }
+        }
+        .asideLatD_Prod{
+            @include asideLatD;
+            grid-area: asideLatD_Prod;
+                .categorias{
+                    display: grid;
+                    grid-template-columns: 35px auto; 
+                    grid-template-rows: repeat(4, auto); 
+                    grid-template-areas:
+                        "cat_titulo cat_titulo"
+                        "masVIco masV"
+                        "libIco libros"
+                        "jueIco juegos";
+                    align-items: center;
+                        .cat_titulo{
+                            grid-area: cat_titulo;
+                            justify-content: center;
+                        }
+                        .masVIco{
+                            grid-area: masVIco;
+                        }
+                        .masV{
+                            grid-area: masV;
+                            text-align: start;
+                            justify-items: center;
+                        }
+                        .libIco{
+                            grid-area: libIco;
+                            align-self: start;
+                        }
+                        .libros{
+                            grid-area: libros;
+                            display: inline;
+                            text-align: left;
+                            padding-top: 8px;
+                        }
+                        .jueIco{
+                            grid-area: jueIco;
+                        }
+                        .juegos{
+                            grid-area: juegos;
+                            text-align: start;
+                            justify-items: center;
+                        }
+                        .aside_subli{
+                            list-style:none;
+                            text-align: left;
+                        }
+                }
+                .cat_resto{
+                    display: none;
+                }
+        }
+}
+/* Fin productos */

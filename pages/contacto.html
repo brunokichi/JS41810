@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Online Bookstore, no somos una simple libreria. Adherite a nuestro club y obtené los beneficios de cada categoria. Ponete en contacto con nosotros.">
+        <meta name="keywords" content="libreria, libros, club de beneficios, consultas libros, consultas juegos, contacto, adherirse club, hacerte socio">
+        <link rel="shortcut icon" href="../images/icono.png">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>The Online Bookstore - Contacto</title>
+    </head>
+<body>
+    <div class="gridCont">
+        <!-- Inicio Header -->
+        <header>
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bkg_transp align-items-end p-0">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="../index.html"><img loading="lazy" src="../images/logo.png" alt="Imagen Logo" class="header_img"></a>
+                    <!-- Menú de navegación -->
+                    <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+                        <ul class="navbar-nav popp_m">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="prods.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="novedades.html">Novedades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="beneficios.html">Beneficios</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="titulos">
+            <h1 class="popp_xl mb-0 lh-1 ms-2 me-2">The Online Bookstore</h1>
+            <h2 class="popp_l mb-1 ms-2 me-2">Contacto</h2>
+        </div>
+        <main class="formu">
+            <!-- Formulario de contacto -->
+            <section class="section1 bkg_transp formulario">
+                <form action="#">
+                    <p class="popp_l mb-1">Datos personales</p>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-sm cont_input popp_s font_formu mb-1" name="nombre_ape" placeholder="Escriba su nombre y apellido" required >
+                        <input type="text" class="form-control form-control-sm cont_input popp_s font_formu mb-1" name="telefono" placeholder="Escriba su número de télefono" required>
+                        <input type="email" class="form-control form-control-sm cont_input popp_s font_formu mb-1" name="email" placeholder="Ingrese su casilla de email" required>
+                    </div>
+                    <p class="popp_l mb-1">Motivo de contacto</p>
+                    <select name="motivo" class="form-select form-select-sm cont_input popp_s font_formu">
+                        <option value="Club">Club The Online Bookstore</option>
+                        <option value="Compra">Compra</option>
+                        <option value="Consulta">Consulta</option>
+                        <option value="Reclamo">Reclamo</option>
+                        <option value="Sugerencia">Sugerencias</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <p class="popp_l mt-3 mb-1">Escribanos un comentario</p>
+                    <textarea name="comentario" id="comentario" class="form-control cont_input popp_s font_formu mb-3" rows="10" cols="50" placeholder="Describanos el motivo de su contacto"></textarea>
+                    <p class="popp_l p_check mb-1">Nos recomendaria?</p>
+                    <label for="recom_si" class="popp_s cont_p">Si
+                        <input class="form-check-input" id="recom_si" name="recomend" type="radio" value="si" checked required>
+                    </label>
+                    <label for="recom_no" class="popp_s cont_p">No
+                        <input class="form-check-input"" id="recom_no" name="recomend" type="radio" value="no"  required>
+                    </label>
+                    <div class="mb-2 mt-2 d-flex justify-content-evenly">
+                        <input class="btn btn-primary btn-sm popp_s" type="reset" value="Limpiar formulario">
+                        <input class="btn btn-primary btn-sm popp_s" type="submit" value="Enviar formulario">
+                    </div>
+                </form>
+                <img loading="lazy" src="../images/cont.png" class="img_formu" alt="Imagen contacto">
+            </section>
+        </main>
+        <section class="mapa">
+            <div class="section1 bkg_transp">
+                <p class="popp_l mb-0">Av. Corrientes 890, Capital Federal (CP 1043)</p>
+                <p class="popp_l mb-1">consultas@theonlinebookstore.com</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0128659566203!2d-58.380791433661386!3d-34.603836168036786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacef16e071d%3A0x30c92693d8e6cbf!2sAv.%20Corrientes%20890%2C%20C1043%20CABA!5e0!3m2!1ses-419!2sar!4v1658144042161!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="cont_iframe"></iframe>
+            </div>
+        </section>
+        <!-- Pie de pagina con acceso a distintas redes -->
+        <footer class="bkg_transp">
+            <div>
+                <a target="_blank" href="https://www.whatsapp.com/?lang=es"><img loading="lazy" src="../images/whts.png" alt="Escribinos por Whatsapp" class="footer_img mt-1 me-2"></a>
+                <a target="_blank" href="https://www.instagram.com/"><img loading="lazy" src="../images/instag.png" alt="Seguinos en Instagram" class="footer_img mt-1 me-2"></a>
+                <a target="_blank" href="https://es-la.facebook.com/"><img loading="lazy" src="../images/faceb.png" alt="Seguinos en Facebook" class="footer_img"></a>
+            </div>
+            <p class="popp_s mb-1 mt-1">®2022 - Todos los derechos reservados</p>
+        </footer>
+        <img loading="lazy" src="../images/top.png" alt="Ir al top" class="footer_img ir-arriba">
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/top.js"></script>
+</body>
+</html>

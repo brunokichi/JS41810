@@ -1,0 +1,14 @@
+header{
+    grid-area: encabezado;
+        .header_img{
+            width: 300px;
+            margin-left: 10px;
+        }
+        .header_img:hover{
+            animation: pulse;
+            animation-duration: $anim_duracion;
+        }
+        .nav-item:hover{
+            background-color: map-get($colores, fondo_nav_item);
+        }
+}
