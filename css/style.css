@@ -80,14 +80,26 @@ a:hover {
 /* Fin estilos generales */
 header {
   grid-area: encabezado; }
-  header .header_img {
-    width: 300px;
-    margin-left: 10px; }
-  header .header_img:hover {
-    animation: pulse;
-    animation-duration: 1s; }
-  header .nav-item:hover {
-    background-color: rgba(88, 88, 88, 0.3); }
+  header .gridNav {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 5px;
+    grid-template-areas: "logo menuEcommerce" "logo menuNavegacion"; }
+    header .gridNav .logo {
+      grid-area: logo; }
+    header .gridNav .menuEcommerce {
+      grid-area: menuEcommerce; }
+    header .gridNav .menuNavegacion {
+      grid-area: menuNavegacion; }
+    header .gridNav .header_img {
+      width: 300px;
+      margin-left: 10px; }
+    header .gridNav .header_img:hover {
+      animation: pulse;
+      animation-duration: 1s; }
+    header .gridNav .nav-item:hover {
+      background-color: rgba(88, 88, 88, 0.3); }
 
 footer {
   grid-area: pie;

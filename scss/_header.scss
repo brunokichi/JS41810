@@ -1,14 +1,32 @@
 header{
     grid-area: encabezado;
-        .header_img{
-            width: 300px;
-            margin-left: 10px;
-        }
-        .header_img:hover{
-            animation: pulse;
-            animation-duration: $anim_duracion;
-        }
-        .nav-item:hover{
-            background-color: map-get($colores, fondo_nav_item);
-        }
+        .gridNav {
+            display: grid;
+            grid-template-columns: auto auto; 
+            grid-template-rows: repeat(2, auto); 
+            grid-row-gap: 5px;
+            grid-template-areas:
+                "logo menuEcommerce"
+                "logo menuNavegacion";
+            .logo{
+                    grid-area: logo;
+            }
+            .menuEcommerce{
+                grid-area: menuEcommerce;
+            }
+            .menuNavegacion{
+                grid-area: menuNavegacion;
+            }
+            .header_img{
+                width: 300px;
+                margin-left: 10px;
+            }
+            .header_img:hover{
+                animation: pulse;
+                animation-duration: $anim_duracion;
+            }
+            .nav-item:hover{
+                background-color: map-get($colores, fondo_nav_item);
+            }
+        }   
 }
