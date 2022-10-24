@@ -11,6 +11,7 @@
         content="libreria, libros, comics, juegos, juegos de mesa, manga, ciencia ficcion, literatura, historia, infantiles">
     <link rel="shortcut icon" href="../images/icono.png">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>The Online Bookstore - Productos</title>
 </head>
@@ -26,37 +27,38 @@
                         <img loading="lazy" src="../images/logo.png" alt="Imagen Logo" class="header_img">
                     </a>
                     <div class="menuEcommerce d-flex justify-content-end">
-                        <lord-icon type="button" data-bs-toggle="modal" data-bs-target="#modalCarrito"
+                        <lord-icon type="button" data-bs-toggle="modal" data-bs-target="#modalCarrito" id="btnCarritoCompras"
                             src="https://cdn.lordicon.com/ggihhudh.json" trigger="hover"
                             colors="primary:#e83a30,secondary:#646e78,tertiary:#ebe6ef" style="width:50px;height:50px">
                         </lord-icon>
                     </div>
                     <div class="modal " id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="modalCarritoLabel">Carrito de compras</h4>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Cerrar"></button>
-                                </div>
-                                <div class="modal-body py-2 px-4">
-                                    <input class="form-control" type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
-                                    <input class="form-check-input" type="checkbox" id="recordarme" value="">
-                                    <label class="form-check-label" for="recordarme">
-                                            Recordarme
-                                    </label>
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content modal-dialog-scrollable">
+                                <form id="formCarritoCompras">
+                                    <div class="modal-header">
+                                            <h4 class="modal-title text-dark" id="modalCarritoLabel">Carrito de compras</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Cerrar"></button>
+                                        </p>
+                                    </div>
+                                    <div class="modal-body py-2 px-4" id="modalCarrito">
+                                        <input class="form-control" type="email" id="inpEmail" placeholder="Ingresa tu correo electrónico" required>
+                                            <input class="form-check-input" type="checkbox" id="inpRecordarme" value="">
+                                            <label class="form-text" for="inpRecordarme">
+                                                    Recordarme para futuras compras
+                                            </label>
+                                            <div id="modalCarritoCompras">
 
-                                </div>
-                                <div class="modal-footer justify-content-end">
-                                    <div class="form-check">
- 
+                                            </div>
                                     </div>
-                                    <div>
-                                        <button class="btn-xs btn-primary" id="carritoFinalizar" type="submit">Finalizar compra</button>
-                                        <button class="btn-xs btn-primary d-none" id="carritoIngreso" type="submit">Ingresar</button>
+                                    <div class="modal-footer justify-content-between" id="modalCarritoPie">
+                                        
+                                            <button class="btn-sm btn-primary" id="btnCarritoVaciar" type="button">Vaciar carrito</button>
+                                            <button class="btn-sm btn-primary" id="btnCarritoFinalizar" type="submit">Finalizar compra</button>
+
                                     </div>
-                                    
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -277,6 +279,8 @@
     <script>
         new WOW().init();
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../js/script.js"></script>
 </body>
 
