@@ -11,7 +11,7 @@
         content="libreria, libros, comics, juegos, juegos de mesa, manga, ciencia ficcion, literatura, historia, infantiles">
     <link rel="shortcut icon" href="../images/icono.png">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/toastify.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>The Online Bookstore - Productos</title>
 </head>
@@ -36,13 +36,13 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content modal-dialog-scrollable">
                                 <form id="formCarritoCompras">
-                                    <div class="modal-header">
+                                    <div class="modal-header popp_m">
                                             <h4 class="modal-title text-dark" id="modalCarritoLabel">Carrito de compras</h4>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Cerrar"></button>
                                         </p>
                                     </div>
-                                    <div class="modal-body py-2 px-4" id="modalCarrito">
+                                    <div class="modal-body py-2 px-4 popp_s" id="modalCarrito">
                                         <input class="form-control" type="email" id="inpEmail" placeholder="Ingresa tu correo electrónico" required>
                                             <input class="form-check-input" type="checkbox" id="inpRecordarme" value="">
                                             <label class="form-text" for="inpRecordarme">
@@ -137,7 +137,6 @@
         </main>
         <!-- Fin productos -->
         <aside class="asideLatD_Prod bkg_transp wow fadeInRight">
-            <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
             <!-- Menú categorias desktop -->
             <div class="categorias cat_desk">
                 <h3 class="cat_titulo popp_m mb-1">Categorías</h3>
@@ -279,8 +278,9 @@
     <script>
         new WOW().init();
     </script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
+    <script src="../js/toastify-js.js" type="text/javascript" ></script>
     <script src="../js/script.js"></script>
 </body>
 

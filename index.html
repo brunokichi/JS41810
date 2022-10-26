@@ -1,46 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="The Online Bookstore, no somos una simple libreria. Venta de libros, juegos de mesa, club de beneficios y mas...">
-        <meta name="keywords" content="libreria, libros, comics, juegos, juegos de mesa, manga, congresos de lectura, club de beneficios">
-        <link rel="shortcut icon" href="./images/icono.png">
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <title>The Online Bookstore</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Online Bookstore, no somos una simple libreria. Venta de libros, juegos de mesa, club de beneficios y mas...">
+    <meta name="keywords" content="libreria, libros, comics, juegos, juegos de mesa, manga, congresos de lectura, club de beneficios">
+    <link rel="shortcut icon" href="./images/icono.png">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>The Online Bookstore</title>
+</head>
 <body>
     <div class="gridIndex">
         <!-- Inicio Header -->
         <header>
             <div class="container-fluid p-0">
-                <nav class="navbar navbar-expand-lg bkg_transp navbar-dark align-items-end p-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bkg_transp p-0 gridNav justify-content-between">
                     <!-- Logo -->
-                    <a class="navbar-brand" href="#"><img loading="lazy" src="./images/logo.png" alt="Imagen Logo" class="header_img"></a>
+                    <a class="navbar-brand logo" href="../index.html">
+                        <img loading="lazy" src="./images/logo.png" alt="Imagen Logo" class="header_img">
+                    </a>
+                    <div class="menuEcommerce d-flex justify-content-end">
+                        <lord-icon type="button" data-bs-toggle="modal" data-bs-target="#modalCarrito" id="btnCarritoCompras"
+                            src="https://cdn.lordicon.com/ggihhudh.json" trigger="hover"
+                            colors="primary:#e83a30,secondary:#646e78,tertiary:#ebe6ef" style="width:50px;height:50px">
+                        </lord-icon>
+                    </div>
+                    <div class="modal " id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content modal-dialog-scrollable">
+                                <form id="formCarritoCompras">
+                                    <div class="modal-header">
+                                            <h4 class="modal-title text-dark" id="modalCarritoLabel">Carrito de compras</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Cerrar"></button>
+                                        </p>
+                                    </div>
+                                    <div class="modal-body py-2 px-4" id="modalCarrito">
+                                        <input class="form-control" type="email" id="inpEmail" placeholder="Ingresa tu correo electrónico" required>
+                                            <input class="form-check-input" type="checkbox" id="inpRecordarme" value="">
+                                            <label class="form-text" for="inpRecordarme">
+                                                    Recordarme para futuras compras
+                                            </label>
+                                            <div id="modalCarritoCompras">
+
+                                            </div>
+                                    </div>
+                                    <div class="modal-footer justify-content-between" id="modalCarritoPie">
+                                        
+                                            <button class="btn-sm btn-primary" id="btnCarritoVaciar" type="button">Vaciar carrito</button>
+                                            <button class="btn-sm btn-primary" id="btnCarritoFinalizar" type="submit">Finalizar compra</button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Menú de navegación -->
-                    <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
-                        <ul class="navbar-nav popp_m">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/prods.html">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/novedades.html">Novedades</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/beneficios.html">Beneficios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                            </li>
-                        </ul>
+                    <div class="menuNavegacion justify-content-end">
+                        <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+                            <ul class="navbar-nav popp_m">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/prods.html">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/novedades.html">Novedades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/beneficios.html">Beneficios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -280,5 +324,8 @@
     <script src="./js/jquery-3.6.1.js"></script>
     <script src="./js/top.js"></script>
 	<script src="./js/multicarousel.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

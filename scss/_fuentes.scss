@@ -19,6 +19,11 @@
     color: map-get($colores, fuente_normal);
     font-weight: 500;
 }
+.font_carrito{
+    font-family: $fuente_familia;
+    font-size: 13px;
+    font-weight: 600;
+}
 .font_formu{
     font-style:italic;
     color: map-get($colores, fuente_formu);

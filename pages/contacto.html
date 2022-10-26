@@ -16,31 +16,73 @@
         <!-- Inicio Header -->
         <header>
             <div class="container-fluid p-0">
-                <nav class="navbar navbar-expand-lg navbar-dark bkg_transp align-items-end p-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bkg_transp p-0 gridNav justify-content-between">
                     <!-- Logo -->
-                    <a class="navbar-brand" href="../index.html"><img loading="lazy" src="../images/logo.png" alt="Imagen Logo" class="header_img"></a>
+                    <a class="navbar-brand logo" href="../index.html">
+                        <img loading="lazy" src="../images/logo.png" alt="Imagen Logo" class="header_img">
+                    </a>
+                    <div class="menuEcommerce d-flex justify-content-end">
+                        <lord-icon type="button" data-bs-toggle="modal" data-bs-target="#modalCarrito" id="btnCarritoCompras"
+                            src="https://cdn.lordicon.com/ggihhudh.json" trigger="hover"
+                            colors="primary:#e83a30,secondary:#646e78,tertiary:#ebe6ef" style="width:50px;height:50px">
+                        </lord-icon>
+                    </div>
+                    <div class="modal " id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content modal-dialog-scrollable">
+                                <form id="formCarritoCompras">
+                                    <div class="modal-header">
+                                            <h4 class="modal-title text-dark" id="modalCarritoLabel">Carrito de compras</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Cerrar"></button>
+                                        </p>
+                                    </div>
+                                    <div class="modal-body py-2 px-4" id="modalCarrito">
+                                        <input class="form-control" type="email" id="inpEmail" placeholder="Ingresa tu correo electrónico" required>
+                                            <input class="form-check-input" type="checkbox" id="inpRecordarme" value="">
+                                            <label class="form-text" for="inpRecordarme">
+                                                    Recordarme para futuras compras
+                                            </label>
+                                            <div id="modalCarritoCompras">
+
+                                            </div>
+                                    </div>
+                                    <div class="modal-footer justify-content-between" id="modalCarritoPie">
+                                        
+                                            <button class="btn-sm btn-primary" id="btnCarritoVaciar" type="button">Vaciar carrito</button>
+                                            <button class="btn-sm btn-primary" id="btnCarritoFinalizar" type="submit">Finalizar compra</button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Menú de navegación -->
-                    <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
-                        <ul class="navbar-nav popp_m">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="prods.html">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="novedades.html">Novedades</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="beneficios.html">Beneficios</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li>
-                        </ul>
+                    <div class="menuNavegacion justify-content-end">
+                        <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+                            <ul class="navbar-nav popp_m">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="prods.html">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="novedades.html">Novedades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="beneficios.html">Beneficios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -106,5 +148,8 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/jquery-3.6.1.js"></script>
     <script src="../js/top.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

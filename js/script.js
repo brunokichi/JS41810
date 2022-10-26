@@ -25,6 +25,8 @@ class Carrito {
         this.id = id;
         this.titulo = titulo;
         this.precio = precio;
+        this.cantidad = '1';
+        this.preciototal = precio;
     }
 
 }
@@ -120,7 +122,7 @@ function mostrarProductos(array, nombrediv) {
                                         <div class="card-footer p-1 mb-0 text-center">
                                             <p class="popp_s font_precio mb-0">
                                                 $ ${elemento.precio}
-                                                <button class="btn p-0 btnsumarcarrito" id="btn_${elemento.id}" value="${elemento.id}" title="Sumar al carrito">
+                                                <button class="btn btn-primary btn-sm p-0 btnsumarcarrito ms-2" id="btn_${elemento.id}" value="${elemento.id}" title="Sumar al carrito">
                                                     <img src="../images/add.png">
                                                 </button>
                                             </p>
@@ -133,12 +135,23 @@ function mostrarProductos(array, nombrediv) {
 function sumoCarrito() {
     listado = productos.find((elemento) => elemento.id == (this.value));
     const sumaProducto = new Carrito(listado.id, listado.titulo, listado.precio);
-    carritoDeCompras.push(sumaProducto);
+    if (carritoDeCompras.some((el) => el.id === listado.id)){
+        const index = carritoDeCompras.findIndex(object => {
+            return object.id === sumaProducto.id;
+          });
+        carritoDeCompras[index].cantidad++;
+        carritoDeCompras[index].preciototal = carritoDeCompras[index].cantidad * carritoDeCompras[index].precio;
+        console.log(carritoDeCompras);
+    } else {
+        carritoDeCompras.push(sumaProducto);
+        console.log("no está");
+    }
     localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
     Toastify({
         text: "Producto agregado al carrito",
         duration: 3000,
-        position: 'right',
+        gravity: "bottom",
+        position: "center",
         style: {
             background: "#888888aa"
         }
@@ -148,12 +161,14 @@ function sumoCarrito() {
 function verCarrito(){
     modalCarritoCompras.innerHTML = "";
     let carritoStorage = JSON.parse(localStorage.getItem('carrito'));
-    contenido = `<table class="table table-striped">
+    contenido = `<table class="table table-striped font_carrito">
                                     <thead>
                                         <tr>
                                             <th scope="col">Cod Producto</th>
                                             <th scope="col">Título</th>
                                             <th scope="col">Precio</th>
+                                            <th scope="col">Cantidad</th>
+                                            <th scope="col">Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>`;
@@ -163,6 +178,8 @@ function verCarrito(){
                                 <th scope="row">${elemento.id}</th>
                                 <td>${elemento.titulo}</td>
                                 <td>$ ${elemento.precio}</td>
+                                <td>X</td>
+                                <td>$ 2</td>
                             </tr>`;
         });
         const total = carritoStorage.reduce((acc, item) => acc + item.precio, 0)
@@ -170,7 +187,7 @@ function verCarrito(){
                      <tfoot>
                         <tr>
                         <th scope="row">Total</th>
-                        <td></td>
+                        <td colspan="3"></td>
                         <th scope="row">$ ${total}</th>
                         </tr>
                     </tfoot>

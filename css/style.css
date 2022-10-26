@@ -133,6 +133,11 @@ footer {
   color: #e1e1e1;
   font-weight: 500; }
 
+.font_carrito {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600; }
+
 .font_formu {
   font-style: italic;
   color: #212529; }
