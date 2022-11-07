@@ -1,32 +1,20 @@
-class Producto {
-
-    constructor(tipo, categoria, titulo, autor, precio, imagen, masvendidos, id) {
-        this.tipo = tipo;
-        this.categoria = categoria;
-        this.titulo = titulo;
-        this.autor = autor;
-        this.precio = precio;
-        this.imagen = imagen;
-        this.masvendidos = masvendidos;
-        this.id = id;
-    }
-}
 class Categoria {
 
-    constructor(tipo, categoria, div) {
+    constructor(tipo, categoria, div, titulo) {
         this.tipo = tipo;
         this.categoria = categoria;
         this.div = div;
+        this.titulo = titulo;
     }
 }
 
 class Carrito {
-    constructor(id, titulo, precio) {
+    constructor(id, titulo, precio, cantidad, preciototal) {
         this.id = id;
         this.titulo = titulo;
         this.precio = precio;
-        this.cantidad = '1';
-        this.preciototal = precio;
+        this.cantidad = cantidad;
+        this.preciototal = preciototal;
     }
 
 }
@@ -37,69 +25,38 @@ const btnCarritoCompras = document.getElementById('btnCarritoCompras'),
     formCarritoCompras = document.getElementById('formCarritoCompras'),
     inpEmail = document.getElementById('inpEmail'),
     inpRecordarme = document.getElementById('inpRecordarme'),
+    inpBusqueda = document.getElementById('inpBusqueda'),
+    divBusqueda = document.getElementById('divBusqueda'),
     modalCarrito = document.getElementById('modalCarrito'),
     modalCarritoCompras = document.getElementById('modalCarritoCompras'),
     modalCarritoPie = document.getElementById('modalCarritoPie'),
+    listaProductos = document.getElementById('listaProductos'),
     carritoDeCompras = [];
 
 const carritoStorage = JSON.parse(localStorage.getItem('carrito'));
-if (carritoStorage){
+
+if (carritoStorage) {
     carritoStorage.forEach(elemento => {
-        const sumaProducto = new Carrito(elemento.id, elemento.titulo, elemento.precio);
+        const sumaProducto = new Carrito(elemento.id, elemento.titulo, elemento.precio, elemento.cantidad, elemento.preciototal);
         carritoDeCompras.push(sumaProducto);
     });
 }
 
 const categorias = [
-    new Categoria("", "", "productosMasVendidos"),
-    new Categoria("Libros", "Ciencia Ficción", "librosCienciaFiccion"),
-    new Categoria("Libros", "Cómic y manga", "librosComicManga"),
-    new Categoria("Libros", "Historia", "librosHistoria"),
-    new Categoria("Libros", "Infantiles", "librosInfantiles"),
-    new Categoria("Juegos de mesa", "", "juegosMesa"),
+    new Categoria("", "", "mas_vend", "Más vendidos"),
+    new Categoria("Libros", "Ciencia Ficción", "libros_ficcion", "Libros - Ciencia Ficción"),
+    new Categoria("Libros", "Cómic y manga", "libros_comic", "Libros - Cómic y manga"),
+    new Categoria("Libros", "Historia", "libros_historia", "Libros - Historia"),
+    new Categoria("Libros", "Infantiles", "libros_infant", "Libros - Infantiles"),
+    new Categoria("Juegos de mesa", "", "juegos", "Juegos de mesa"),
 ];
 
-const productos = [
-    new Producto('Libros', 'Historia', 'Notas al pie', 'Dolina, Alejandro', 3180, '../images/prod_notas.png', 'si', 1),
-    new Producto('Libros', 'Ciencia Ficción', 'El italiano', 'Perez-Reverte, Arturo', 3799, '../images/prod_el_italiano.png', 'si', 2),
-    new Producto('Libros', 'Ciencia Ficción', 'Estrellas y galaxias', 'Diaz Beltran, Angeles', 6560, '../images/prod_estrellas.png', 'si', 3),
-    new Producto('Libros', 'Ciencia Ficción', 'El destino celeste', 'Robinette Kowal, Mary', 4390, '../images/prod_cf_destino.jpg', 'no', 4),
-    new Producto('Libros', 'Ciencia Ficción', 'Cismatrix', 'Sterling, Bruce', 3150, '../images/prod_cf_cismatrix.jpg', 'no', 5),
-    new Producto('Libros', 'Ciencia Ficción', 'Una princesa de Marte', 'Burroughs, Edgar Rice', 2450, '../images/prod_cf_princesa.jpg', 'no', 6),
-    new Producto('Libros', 'Ciencia Ficción', 'El rey de amarillo', 'Chambers, Robert', 3110, '../images/prod_cf_amarillo.jpg', 'no', 7),
-    new Producto('Libros', 'Ciencia Ficción', 'El sueño del Fevre', 'Martin, George R.', 3150, '../images/prod_cf_fevre.jpg', 'no', 8),
-    new Producto('Libros', 'Ciencia Ficción', 'Una canción para Lya', 'Martin, George R.', 3299, '../images/prod_cf_lya.jpg', 'no', 9),
-    new Producto('Libros', 'Ciencia Ficción', 'Star Wars - The Mandalorian', 'Disney', 1950, '../images/prod_cf_starw_mandalorian.jpg', 'no', 10),
-    new Producto('Libros', 'Ciencia Ficción', 'Star Wars Icons - Han Solo', 'Mcintyre, Gina', 9900, '../images/prod_cf_starw_hansolo.jpg', 'no', 11),
-    new Producto('Libros', 'Cómic y manga', 'Star Wars - Los diarios de Wan-Kenobi', 'Editorial Planeta', 3099, '../images/prod_cm_kenobi.jpg', 'no', 12),
-    new Producto('Libros', 'Cómic y manga', 'Love Wars', 'Cuaresma, Eric', 2120, '../images/prod_cm_love.jpg', 'no', 13),
-    new Producto('Libros', 'Cómic y manga', 'Nave prisión', 'Bruce, Jones', 2020, '../images/prod_cm_prision.jpg', 'no', 14),
-    new Producto('Libros', 'Cómic y manga', 'Transformers: Cybertron Oscuro', 'Roberts, James', 4900, '../images/prod_cm_transf_cybertron.jpg', 'no', 15),
-    new Producto('Libros', 'Cómic y manga', 'Transformers More than meets the eye', 'Roberts, James', 3190, '../images/prod_cm_transf_eye.jpg', 'no', 16),
-    new Producto('Libros', 'Historia', 'Roma soy yo', 'Posteguillo, Santiago', 3999, '../images/prod_roma.png', 'si', 17),
-    new Producto('Libros', 'Historia', 'Una Corona de huesos dorados', 'Armentrout, Jennifer', 3550, '../images/prod_corona.png', 'si', 18),
-    new Producto('Libros', 'Historia', 'La gran aventura de los griegos', 'Negrete, Javier', 4600, '../images/prod_hist_griegos.jpg', 'si', 19),
-    new Producto('Libros', 'Historia', 'Roma Victoriosa', 'Negrete, Javier', 3750, '../images/prod_hist_roma.jpg', 'no', 20),
-    new Producto('Libros', 'Historia', 'Rusia revolución y guerra civil', 'Beevor, Antony', 4399, '../images/prod_hist_rusia.jpg', 'no', 21),
-    new Producto('Libros', 'Historia', 'Los dias de la revolución', 'Sacheri, Eduardo', 3349, '../images/prod_hist_revolucion.jpg', 'no', 22),
-    new Producto('Libros', 'Historia', 'Breve historia contemporánea de la Argentina', 'Romero, Jose Luis', 3099, '../images/prod_hist_argentina.jpg', 'no', 23),
-    new Producto('Libros', 'Historia', 'Historia secreta Mapuche', 'Cayuqueo, Pedro', 3899, '../images/prod_hist_mapuche.jpg', 'no', 24),
-    new Producto('Libros', 'Infantiles', 'Vicnix En la ciudad secreta', 'Invictor', 2349, '../images/prod_inf_vicnix.jpg', 'si', 25),
-    new Producto('Libros', 'Infantiles', 'En busca de la esmeralda', 'Invictor y Mayo', 2349, '../images/prod_inf_esmeralda.jpg', 'no', 26),
-    new Producto('Libros', 'Infantiles', "Five Nights at Freddy's", 'Cawthon, Scott', 3749, '../images/prod_inf_freddy.jpg', 'no', 27),
-    new Producto('Libros', 'Infantiles', 'La casa de los madrigal', 'Disney', 1049, '../images/prod_inf_madrigal.jpg', 'no', 28),
-    new Producto('Libros', 'Infantiles', 'Lightyear - Al infinito y más alla', 'Pixar, Disney', 4149, '../images/prod_inf_lightyear.jpg', 'no', 29),
-    new Producto('Libros', 'Infantiles', 'El mundo de arriba', 'Disney', 1019, '../images/prod_inf_mundo.jpg', 'no', 30),
-    new Producto('Juegos de mesa', '', 'Monopoly', 'Hasbro', 7799, '../images/prod_jdm_monopoly.png', 'no', 31),
-    new Producto('Juegos de mesa', '', 'Scrabble', 'Ruibal', 4439, '../images/prod_jdm_scrabble.png', 'no', 32),
-    new Producto('Juegos de mesa', '', 'Preguntados', 'ToyCo', 3399, '../images/prod_jdm_preguntados.png', 'no', 33),
-    new Producto('Juegos de mesa', '', 'TEG', 'Yetem', 6499, '../images/prod_jdm_teg.png', 'no', 34),
-    new Producto('Juegos de mesa', '', 'Twister', 'Hasbro', 4739, '../images/prod_jdm_twister.png', 'no', 35),
-    new Producto('Juegos de mesa', '', 'Burako', 'Top Toys', 3439, '../images/prod_jdm_burako.png', 'no', 36)
-];
+let contenido = "";
+let idBoton = "";
 
+// Funcion para armar el listado de productos armando primero si corresponde a mas vendidos, despues por tipo y categoria
 function armaListado(array, tipo, categoria, div) {
-    if (div == 'productosMasVendidos') {
+    if (div == 'mas_vend') {
         listado = array.filter((elemento) => elemento.masvendidos == 'si');
     } else {
         listado = array.filter((elemento) => elemento.tipo == tipo && elemento.categoria == categoria);
@@ -107,11 +64,19 @@ function armaListado(array, tipo, categoria, div) {
     return listado;
 }
 
-function mostrarProductos(array, nombrediv) {
-    const contenedor = document.getElementById(nombrediv);
-    contenedor.innerHTML = "";
+// Funcion para armar los sections y cards de productos por categoria
+function mostrarProductos(array, nombrediv, titulo, accion) {
+    if (accion == "busqueda") {
+        contenido = "";
+        idBoton = "btn_busq_";
+    } else {
+        idBoton = "btn_";
+    }
+    contenido += `<section class="section1 bkg_transp wow fadeInLeft mb-2" data-wow-delay="0" id="${nombrediv}">
+                        <h3 class="popp_m mb-1">${titulo}</h3>
+                        <div class="card-group row-cols-auto gap-3">`;
     array.forEach(elemento => {
-        contenedor.innerHTML += `<div class="col">
+        contenido += `<div class="col">
                                     <div class="card prod_card p-1 mb-1 h-100">
                                         <img loading="lazy" src="${elemento.imagen}" class="img_sombra img_opac mb-1"
                                         alt="Portada ${elemento.titulo}">
@@ -122,7 +87,7 @@ function mostrarProductos(array, nombrediv) {
                                         <div class="card-footer p-1 mb-0 text-center">
                                             <p class="popp_s font_precio mb-0">
                                                 $ ${elemento.precio}
-                                                <button class="btn btn-primary btn-sm p-0 btnsumarcarrito ms-2" id="btn_${elemento.id}" value="${elemento.id}" title="Sumar al carrito">
+                                                <button class="btn btn-primary btn-sm p-0 btnsumarcarrito ms-2" id="${idBoton}${elemento.id}" value="${elemento.id}" title="Sumar al carrito">
                                                     <img src="../images/add.png">
                                                 </button>
                                             </p>
@@ -130,25 +95,61 @@ function mostrarProductos(array, nombrediv) {
                                     </div>
                                 </div>`;
     });
+    contenido += `</section></div>`;
+    accion == "listado" ? listaProductos.innerHTML = contenido : divBusqueda.innerHTML = contenido;
 }
 
+// Funcion para agregar productos, o sumar unidades, al carrito en base al value que tiene el boton
 function sumoCarrito() {
-    listado = productos.find((elemento) => elemento.id == (this.value));
-    const sumaProducto = new Carrito(listado.id, listado.titulo, listado.precio);
-    if (carritoDeCompras.some((el) => el.id === listado.id)){
-        const index = carritoDeCompras.findIndex(object => {
-            return object.id === sumaProducto.id;
-          });
-        carritoDeCompras[index].cantidad++;
-        carritoDeCompras[index].preciototal = carritoDeCompras[index].cantidad * carritoDeCompras[index].precio;
-        console.log(carritoDeCompras);
+    fetch('../js/productos.json')
+        .then((response) => response.json())
+        .then((productos) => {
+            listado = productos.find((elemento) => elemento.id == (this.value));
+            if (carritoDeCompras.some((el) => el.id === listado.id)) {
+                const index = carritoDeCompras.findIndex(object => {
+                    return object.id === listado.id;
+                });
+                carritoDeCompras[index].cantidad++;
+                carritoDeCompras[index].preciototal = carritoDeCompras[index].cantidad * carritoDeCompras[index].precio;
+            } else {
+                const sumaProducto = new Carrito(listado.id, listado.titulo, listado.precio, 1, listado.precio);
+                carritoDeCompras.push(sumaProducto);
+            }
+            localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 3000,
+                gravity: "bottom",
+                position: "center",
+                style: {
+                    background: "#888888aa"
+                }
+            }).showToast();
+            verCarrito();
+        })
+}
+
+// Funcion para restar productos, o eliminar de ser 1 solo, del carrito en base al value del boton
+function restoCarrito() {
+    let mensaje = '';
+    if (carritoDeCompras.some((el) => el.id == this.value)) {
+        const id = this.value;
+        let index = carritoDeCompras.findIndex(object => {
+            return object.id == id;
+        });
+        if (carritoDeCompras[index].cantidad > 1) {
+            carritoDeCompras[index].cantidad--;
+            carritoDeCompras[index].preciototal = carritoDeCompras[index].cantidad * carritoDeCompras[index].precio;
+        } else {
+            carritoDeCompras.splice(index, 1);
+        }
+        localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
+        mensaje = "Producto quitado del carrito";
     } else {
-        carritoDeCompras.push(sumaProducto);
-        console.log("no está");
+        mensaje = "Producto inexistente en el carrito";
     }
-    localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
     Toastify({
-        text: "Producto agregado al carrito",
+        text: `${mensaje}`,
         duration: 3000,
         gravity: "bottom",
         position: "center",
@@ -156,15 +157,16 @@ function sumoCarrito() {
             background: "#888888aa"
         }
     }).showToast();
+    verCarrito();
 }
 
-function verCarrito(){
+// Funcion para armar la vista del carrito en el modal
+function verCarrito() {
     modalCarritoCompras.innerHTML = "";
     let carritoStorage = JSON.parse(localStorage.getItem('carrito'));
     contenido = `<table class="table table-striped font_carrito">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Cod Producto</th>
                                             <th scope="col">Título</th>
                                             <th scope="col">Precio</th>
                                             <th scope="col">Cantidad</th>
@@ -175,26 +177,31 @@ function verCarrito(){
     if (carritoStorage) {
         carritoStorage.forEach(elemento => {
             contenido += `<tr>
-                                <th scope="row">${elemento.id}</th>
-                                <td>${elemento.titulo}</td>
-                                <td>$ ${elemento.precio}</td>
-                                <td>X</td>
-                                <td>$ 2</td>
-                            </tr>`;
+                            <td class="text-wrap">${elemento.titulo}</td>
+                            <td class="text-nowrap"> $ ${elemento.precio}</td>
+                            <td class="text-nowrap">
+                                <button type="button" class="btn btn-sm p-0 btnrestarmodal me-1" id="btn_del_modal_${elemento.id}" value="${elemento.id}" title="Restar unidad">
+                                    <img src="../images/del_modal.png">
+                                </button>
+                                ${elemento.cantidad}
+                                <button type="button" class="btn btn-sm p-0 btnsumarmodal ms-1" id="btn_add_modal_${elemento.id}" value="${elemento.id}" title="Sumar unidad">
+                                    <img src="../images/add_modal.png">
+                                </button>
+                            </td>
+                            <td class="text-nowrap">$ ${elemento.preciototal}</td>
+                        </tr>`;
         });
-        const total = carritoStorage.reduce((acc, item) => acc + item.precio, 0)
+        const total = carritoStorage.reduce((acc, item) => acc + item.preciototal, 0)
         contenido += `</tbody>
                      <tfoot>
                         <tr>
                         <th scope="row">Total</th>
-                        <td colspan="3"></td>
+                        <td colspan="2"></td>
                         <th scope="row">$ ${total}</th>
                         </tr>
                     </tfoot>
                 `;
         modalCarritoPie.classList.remove("d-none");
-        
-         
     } else {
         contenido += `<tr>
                         <th scope="row" colspan="4" class="text-center">Carrito vacio</th>
@@ -203,56 +210,103 @@ function verCarrito(){
     }
     contenido += "</table>";
     modalCarritoCompras.innerHTML += contenido;
-    
+    // Armo botones para productos en modal
+    btnSumarM = document.querySelectorAll(".btnsumarmodal");
+    btnSumarM.forEach((element) => {
+        element.addEventListener("click", sumoCarrito);
+    });
+    btnRestarM = document.querySelectorAll(".btnrestarmodal");
+    btnRestarM.forEach((element) => {
+        element.addEventListener("click", restoCarrito);
+    });
+
 }
 
-function recuperoEmail(storage) {
-    let emailStorage = JSON.parse(storage.getItem('email'));
-    return emailStorage;
-}
-
+// Chequea mail en storage al abrir carrito
 btnCarritoCompras.addEventListener('click', () => {
-    if(localStorage.getItem('email')){
-        inpEmail.value = JSON.parse(localStorage.getItem('email'));
-    } else {
-        inpEmail.value = JSON.parse(sessionStorage.getItem('email'));
-    }
+    localStorage.getItem('email') ? inpEmail.value = JSON.parse(localStorage.getItem('email')) : inpEmail.value = JSON.parse(sessionStorage.getItem('email'));
     verCarrito();
 })
 
+// Vacia carrito en storage y const
 btnCarritoVaciar.addEventListener('click', () => {
     localStorage.removeItem('carrito');
     carritoDeCompras.splice(0);
     verCarrito();
 })
 
+// Capto el evento de cierre del modal y guardo / elimino en storage el email dependiendo el checkbox
 modalCarrito.addEventListener('hide.bs.modal', () => {
     if (inpRecordarme.checked && inpEmail.value != '') {
         localStorage.setItem('email', JSON.stringify(inpEmail.value));
         sessionStorage.removeItem('email');
-    } else { 
+    } else {
         sessionStorage.setItem('email', JSON.stringify(inpEmail.value));
         localStorage.removeItem('email');
     }
 });
 
+// Capto submit del modal y genero orden de compra, despues vacio el carrito
 formCarritoCompras.addEventListener('submit', (e) => {
     e.preventDefault();
-    swal("Orden de compra generada!", "En instantes recibirá por email la confirmación y un link para generar el pago", "success");
+    const numeroRandom = Math.round((Math.random() * 10000));
+    swal(`Orden de compra #${numeroRandom} generada!`, `En instantes le llegará un mail a ${inpEmail.value} con la confirmación de la solicitud y un link para generar el pago`, "success");
     $('#modalCarrito').modal('hide');
     localStorage.removeItem('carrito');
-    carritoDeCompras.splice(0); 
+    carritoDeCompras.splice(0);
 });
 
+// Busqueda de productos
+inpBusqueda.addEventListener('input', () => {
+    if (inpBusqueda.value.length > 2) {
+        fetch('../js/productos.json')
+            .then((response) => response.json())
+            .then((data) => {
+                listado = data.filter((elemento) => elemento.titulo.toLowerCase().includes(inpBusqueda.value.toLowerCase()) || elemento.autor.toLowerCase().includes(inpBusqueda.value.toLowerCase()));
+                if (listado.length > 0) {
+                    mostrarProductos(listado, "divBusqueda", "Resultados de la búsqueda", "busqueda");
+                    btnSumarC = document.querySelectorAll(".btnsumarcarrito");
+                    btnSumarC.forEach((element) => {
+                        element.addEventListener("click", sumoCarrito);
+                    });
+                } else {
+                    divBusqueda.innerHTML = `<section class="section1 bkg_transp wow fadeInLeft mb-2" data-wow-delay="0" id="divBusqueda">
+                        <h3 class="popp_m mb-1">Resultados de la búsqueda</h3>
+                        <p class="popp_m">No se han encontrado productos que concuerden con lo ingresado</p>
+                        </section>`;
+                }
+            }).catch(() => {
+                divBusqueda.innerHTML = `<section class="section1 bkg_transp wow fadeInLeft mb-2" data-wow-delay="0" id="divBusqueda">
+            <h3 class="popp_m mb-1">Resultados de la búsqueda</h3>
+            <p class="popp_m">Se produjo un error, intente nuevamente más tarde o ponganse en contacto con nosotros</p>
+            </section>`
+            });
+        divBusqueda.classList.remove("d-none");
+    } else {
+        divBusqueda.classList.add("d-none");
+    }
+})
+
+
 window.onload = () => {
-	// Armo listado de categorias y productos
-    categorias.forEach((elemento) => {
-		let lista = armaListado(productos,elemento.tipo,elemento.categoria,elemento.div);
-		mostrarProductos(lista, elemento.div);
-	});
-    // Armo botones para productos
-	btnSumarC = document.querySelectorAll(".btnsumarcarrito");
-	btnSumarC.forEach((element) => {
-		element.addEventListener("click", sumoCarrito);
-	});
+    // Armo listado de productos
+    fetch('../js/productos.json')
+        .then((response) => response.json())
+        .then((data) => {
+            // Armo listado de categorias con productos
+            categorias.forEach((elemento) => {
+                let lista = armaListado(data, elemento.tipo, elemento.categoria, elemento.div);
+                mostrarProductos(lista, elemento.div, elemento.titulo, "listado");
+            });
+            // Armo botones para productos
+            btnSumarC = document.querySelectorAll(".btnsumarcarrito");
+            btnSumarC.forEach((element) => {
+                element.addEventListener("click", sumoCarrito);
+            });
+        }).catch(() => {
+            listaProductos.innerHTML = `<section class="section1 bkg_transp wow fadeInLeft" data-wow-delay="0">
+            <h3 class="popp_m mb-1">No hay productos disponibles</h3>
+            <p class="popp_s font_espac1 mb-1">Intente nuevamente más tarde o ponganse en contacto con nosotros</p>
+            </section>`;
+        });
 };

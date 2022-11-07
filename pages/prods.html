@@ -27,35 +27,39 @@
                         <img loading="lazy" src="../images/logo.png" alt="Imagen Logo" class="header_img">
                     </a>
                     <div class="menuEcommerce d-flex justify-content-end">
-                        <lord-icon type="button" data-bs-toggle="modal" data-bs-target="#modalCarrito" id="btnCarritoCompras"
-                            src="https://cdn.lordicon.com/ggihhudh.json" trigger="hover"
+                        <lord-icon type="button" data-bs-toggle="modal" data-bs-target="#modalCarrito"
+                            id="btnCarritoCompras" src="https://cdn.lordicon.com/ggihhudh.json" trigger="hover"
                             colors="primary:#e83a30,secondary:#646e78,tertiary:#ebe6ef" style="width:50px;height:50px">
                         </lord-icon>
                     </div>
-                    <div class="modal " id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+                    <div class="modal" id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content modal-dialog-scrollable">
                                 <form id="formCarritoCompras">
                                     <div class="modal-header popp_m">
-                                            <h4 class="modal-title text-dark" id="modalCarritoLabel">Carrito de compras</h4>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        <h4 class="modal-title text-dark" id="modalCarritoLabel">Carrito de compras</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Cerrar"></button>
                                         </p>
                                     </div>
                                     <div class="modal-body py-2 px-4 popp_s" id="modalCarrito">
-                                        <input class="form-control" type="email" id="inpEmail" placeholder="Ingresa tu correo electrónico" required>
-                                            <input class="form-check-input" type="checkbox" id="inpRecordarme" value="">
-                                            <label class="form-text" for="inpRecordarme">
-                                                    Recordarme para futuras compras
-                                            </label>
-                                            <div id="modalCarritoCompras">
+                                        <input class="form-control" type="email" id="inpEmail"
+                                            placeholder="Ingresa tu correo electrónico" required>
+                                        <input class="form-check-input" type="checkbox" id="inpRecordarme" value="">
+                                        <label class="form-text" for="inpRecordarme">
+                                            Recordarme para futuras compras
+                                        </label>
+                                        <div id="modalCarritoCompras">
 
-                                            </div>
+                                        </div>
                                     </div>
                                     <div class="modal-footer justify-content-between" id="modalCarritoPie">
-                                        
-                                            <button class="btn-sm btn-primary" id="btnCarritoVaciar" type="button">Vaciar carrito</button>
-                                            <button class="btn-sm btn-primary" id="btnCarritoFinalizar" type="submit">Finalizar compra</button>
+
+                                        <button class="btn-sm btn-primary" id="btnCarritoVaciar" type="button">Vaciar
+                                            carrito</button>
+                                        <button class="btn-sm btn-primary" id="btnCarritoFinalizar"
+                                            type="submit">Finalizar compra</button>
 
                                     </div>
                                 </form>
@@ -97,48 +101,22 @@
             <h2 class="popp_l mb-1 ms-2 me-2">Productos</h2>
         </div>
         <main class="mainLatI_Prod ps-1 pe-1">
-            <!-- Sections con lineas de productos -->
-            <section class="section1 bkg_transp wow fadeInLeft" data-wow-delay="0" id="mas_vend">
-                <h3 class="popp_m mb-1">Más vendidos</h3>
-                <div class="card-group row-cols-auto gap-3" id="productosMasVendidos">
-
-                </div>
-            </section>
-            <section class="section1 bkg_transp wow fadeInLeft" id="libros_ficcion">
-                <h3 class="popp_m mb-1">Libros - Ciencia Ficción</h3>
-                <div class="card-group row-cols-auto gap-3" id="librosCienciaFiccion">
-                    
-                </div>
-            </section>
-            <section class="section1 bkg_transp wow fadeIn" id="libros_comic">
-                <h3 class="popp_m mb-1">Libros - Cómic y manga</h3>
-                <div class="card-group row-cols-auto gap-3"  id="librosComicManga">
-                    
-                </div>
-            </section>
-            <section class="section1 bkg_transp wow fadeIn" id="libros_historia">
-                <h3 class="popp_m mb-1">Libros - Historia</h3>
-                <div class="card-group row-cols-auto gap-3" id="librosHistoria">
-
-                </div>
-            </section>
-            <section class="section1 bkg_transp wow fadeIn" id="libros_infant">
-                <h3 class="popp_m mb-1">Libros - Infantiles</h3>
-                <div class="card-group row-cols-auto gap-3" id="librosInfantiles">
-
-                </div>
-            </section>
-            <section class="section1 bkg_transp wow fadeIn" id="juegos">
-                <h3 class="popp_m mb-1">Juegos de mesa</h3>
-                <div class="card-group row-cols-auto gap-3" id="juegosMesa">
-                    
-                </div>
-            </section>
+            <div class="d-none" id="divBusqueda">
+            
+            </div>
+            <div id="listaProductos">
+                <!-- Sections mediante JS con lineas de productos -->
+            </div>
         </main>
         <!-- Fin productos -->
         <aside class="asideLatD_Prod bkg_transp wow fadeInRight">
             <!-- Menú categorias desktop -->
-            <div class="categorias cat_desk">
+            <div>
+                <h3 class="cat_titulo popp_m mb-1 cat_desk">Búsqueda</h3>
+                <input type="text" class="form-control-sm cont_input popp_s font_formu mb-1 w-75 text-center rounded"
+                    id="inpBusqueda" placeholder="Escriba el título / autor a buscar" title="Ingrese al menos 3 letras">
+            </div>
+            <div class="categorias cat_desk mt-2">
                 <h3 class="cat_titulo popp_m mb-1">Categorías</h3>
                 <lord-icon class="masVIco" src="https://cdn.lordicon.com/jeikhfcr.json" trigger="loop" scale="55">
                 </lord-icon>
@@ -194,7 +172,7 @@
                     <a href="#juegos" class="text-decoration-none nav-item popp_s">Juegos de mesa</a>
                 </div>
             </div>
-            <!-- Menú categorias < desktop -->
+            <!-- Menú categorias <> desktop -->
             <div class="categorias cat_resto w-100">
                 <nav>
                     <div class="nav justify-content-evenly" id="nav-tab" role="tablist">
@@ -280,7 +258,7 @@
     </script>
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
     <script src="../js/sweetalert.min.js"></script>
-    <script src="../js/toastify-js.js" type="text/javascript" ></script>
+    <script src="../js/toastify-js.js" type="text/javascript"></script>
     <script src="../js/script.js"></script>
 </body>
 

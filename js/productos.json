@@ -1,0 +1,362 @@
+[
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "Notas al pie",
+    "autor": "Dolina, Alejandro",
+    "precio": 3180,
+    "imagen": "../images/prod_notas.png",
+    "masvendidos": "si",
+    "id": 1
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "El italiano",
+    "autor": "Perez-Reverte, Arturo",
+    "precio": 3799,
+    "imagen": "../images/prod_el_italiano.png",
+    "masvendidos": "si",
+    "id": 2
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "Estrellas y galaxias",
+    "autor": "Diaz Beltran, Angeles",
+    "precio": 6560,
+    "imagen": "../images/prod_estrellas.png",
+    "masvendidos": "si",
+    "id": 3
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "El destino celeste",
+    "autor": "Robinette Kowal, Mary",
+    "precio": 4390,
+    "imagen": "../images/prod_cf_destino.jpg",
+    "masvendidos": "no",
+    "id": 4
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "Cismatrix",
+    "autor": "Sterling, Bruce",
+    "precio": 3150,
+    "imagen": "../images/prod_cf_cismatrix.jpg",
+    "masvendidos": "no",
+    "id": 5
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "Una princesa de Marte",
+    "autor": "Burroughs, Edgar Rice",
+    "precio": 2450,
+    "imagen": "../images/prod_cf_princesa.jpg",
+    "masvendidos": "no",
+    "id": 6
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "El rey de amarillo",
+    "autor": "Chambers, Robert",
+    "precio": 3110,
+    "imagen": "../images/prod_cf_amarillo.jpg",
+    "masvendidos": "no",
+    "id": 7
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "El sueño del Fevre",
+    "autor": "Martin, George R.",
+    "precio": 3150,
+    "imagen": "../images/prod_cf_fevre.jpg",
+    "masvendidos": "no",
+    "id": 8
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "Una canción para Lya",
+    "autor": "Martin, George R.",
+    "precio": 3299,
+    "imagen": "../images/prod_cf_lya.jpg",
+    "masvendidos": "no",
+    "id": 9
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "Star Wars - The Mandalorian",
+    "autor": "Disney",
+    "precio": 1950,
+    "imagen": "../images/prod_cf_starw_mandalorian.jpg",
+    "masvendidos": "no",
+    "id": 10
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Ciencia Ficción",
+    "titulo": "Star Wars Icons - Han Solo",
+    "autor": "Mcintyre, Gina",
+    "precio": 9900,
+    "imagen": "../images/prod_cf_starw_hansolo.jpg",
+    "masvendidos": "no",
+    "id": 11
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Cómic y manga",
+    "titulo": "Star Wars - Los diarios de Wan-Kenobi",
+    "autor": "Editorial Planeta",
+    "precio": 3099,
+    "imagen": "../images/prod_cm_kenobi.jpg",
+    "masvendidos": "no",
+    "id": 12
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Cómic y manga",
+    "titulo": "Love Wars",
+    "autor": "Cuaresma, Eric",
+    "precio": 2120,
+    "imagen": "../images/prod_cm_love.jpg",
+    "masvendidos": "no",
+    "id": 13
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Cómic y manga",
+    "titulo": "Nave prisión",
+    "autor": "Bruce, Jones",
+    "precio": 2020,
+    "imagen": "../images/prod_cm_prision.jpg",
+    "masvendidos": "no",
+    "id": 14
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Cómic y manga",
+    "titulo": "Transformers: Cybertron Oscuro",
+    "autor": "Roberts, James",
+    "precio": 4900,
+    "imagen": "../images/prod_cm_transf_cybertron.jpg",
+    "masvendidos": "no",
+    "id": 15
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Cómic y manga",
+    "titulo": "Transformers More than meets the eye",
+    "autor": "Roberts, James",
+    "precio": 3190,
+    "imagen": "../images/prod_cm_transf_eye.jpg",
+    "masvendidos": "no",
+    "id": 16
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "Roma soy yo",
+    "autor": "Posteguillo, Santiago",
+    "precio": 3999,
+    "imagen": "../images/prod_roma.png",
+    "masvendidos": "si",
+    "id": 17
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "Una Corona de huesos dorados",
+    "autor": "Armentrout, Jennifer",
+    "precio": 3550,
+    "imagen": "../images/prod_corona.png",
+    "masvendidos": "si",
+    "id": 18
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "La gran aventura de los griegos",
+    "autor": "Negrete, Javier",
+    "precio": 4600,
+    "imagen": "../images/prod_hist_griegos.jpg",
+    "masvendidos": "si",
+    "id": 19
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "Roma Victoriosa",
+    "autor": "Negrete, Javier",
+    "precio": 3750,
+    "imagen": "../images/prod_hist_roma.jpg",
+    "masvendidos": "no",
+    "id": 20
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "Rusia revolución y guerra civil",
+    "autor": "Beevor, Antony",
+    "precio": 4399,
+    "imagen": "../images/prod_hist_rusia.jpg",
+    "masvendidos": "no",
+    "id": 21
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "Los dias de la revolución",
+    "autor": "Sacheri, Eduardo",
+    "precio": 3349,
+    "imagen": "../images/prod_hist_revolucion.jpg",
+    "masvendidos": "no",
+    "id": 22
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "Breve historia contemporánea de la Argentina",
+    "autor": "Romero, Jose Luis",
+    "precio": 3099,
+    "imagen": "../images/prod_hist_argentina.jpg",
+    "masvendidos": "no",
+    "id": 23
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Historia",
+    "titulo": "Historia secreta Mapuche",
+    "autor": "Cayuqueo, Pedro",
+    "precio": 3899,
+    "imagen": "../images/prod_hist_mapuche.jpg",
+    "masvendidos": "no",
+    "id": 24
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Infantiles",
+    "titulo": "Vicnix En la ciudad secreta",
+    "autor": "Invictor",
+    "precio": 2349,
+    "imagen": "../images/prod_inf_vicnix.jpg",
+    "masvendidos": "si",
+    "id": 25
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Infantiles",
+    "titulo": "En busca de la esmeralda",
+    "autor": "Invictor y Mayo",
+    "precio": 2349,
+    "imagen": "../images/prod_inf_esmeralda.jpg",
+    "masvendidos": "no",
+    "id": 26
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Infantiles",
+    "titulo": "Five Nights at Freddy's",
+    "autor": "Cawthon, Scott",
+    "precio": 3749,
+    "imagen": "../images/prod_inf_freddy.jpg",
+    "masvendidos": "no",
+    "id": 27
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Infantiles",
+    "titulo": "La casa de los madrigal",
+    "autor": "Disney",
+    "precio": 1049,
+    "imagen": "../images/prod_inf_madrigal.jpg",
+    "masvendidos": "no",
+    "id": 28
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Infantiles",
+    "titulo": "Lightyear - Al infinito y más alla",
+    "autor": "Pixar, Disney",
+    "precio": 4149,
+    "imagen": "../images/prod_inf_lightyear.jpg",
+    "masvendidos": "no",
+    "id": 29
+  },
+  {
+    "tipo": "Libros",
+    "categoria": "Infantiles",
+    "titulo": "El mundo de arriba",
+    "autor": "Disney",
+    "precio": 1019,
+    "imagen": "../images/prod_inf_mundo.jpg",
+    "masvendidos": "no",
+    "id": 30
+  },
+  {
+    "tipo": "Juegos de mesa",
+    "categoria": "",
+    "titulo": "Monopoly",
+    "autor": "Hasbro",
+    "precio": 7799,
+    "imagen": "../images/prod_jdm_monopoly.png",
+    "masvendidos": "no",
+    "id": 31
+  },
+  {
+    "tipo": "Juegos de mesa",
+    "categoria": "",
+    "titulo": "Scrabble",
+    "autor": "Ruibal",
+    "precio": 4439,
+    "imagen": "../images/prod_jdm_scrabble.png",
+    "masvendidos": "no",
+    "id": 32
+  },
+  {
+    "tipo": "Juegos de mesa",
+    "categoria": "",
+    "titulo": "Preguntados",
+    "autor": "ToyCo",
+    "precio": 3399,
+    "imagen": "../images/prod_jdm_preguntados.png",
+    "masvendidos": "no",
+    "id": 33
+  },
+  {
+    "tipo": "Juegos de mesa",
+    "categoria": "",
+    "titulo": "TEG",
+    "autor": "Yetem",
+    "precio": 6499,
+    "imagen": "../images/prod_jdm_teg.png",
+    "masvendidos": "no",
+    "id": 34
+  },
+  {
+    "tipo": "Juegos de mesa",
+    "categoria": "",
+    "titulo": "Twister",
+    "autor": "Hasbro",
+    "precio": 4739,
+    "imagen": "../images/prod_jdm_twister.png",
+    "masvendidos": "no",
+    "id": 35
+  },
+  {
+    "tipo": "Juegos de mesa",
+    "categoria": "",
+    "titulo": "Burako",
+    "autor": "Top Toys",
+    "precio": 3439,
+    "imagen": "../images/prod_jdm_burako.png",
+    "masvendidos": "no",
+    "id": 36
+  }
+]
